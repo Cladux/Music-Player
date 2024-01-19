@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 type ProgressBarProps = {
   progress: number;
   onChange: (value: number) => void;
@@ -11,8 +13,18 @@ const ProgressBar = ({
   leftLabel,
   rightLabel,
 }: ProgressBarProps) => {
+  const ProgressWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+  `;
+  const LabelWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+  `;
   return (
-    <div>
+    <ProgressWrapper>
       <input
         type="range"
         min="1"
@@ -24,11 +36,11 @@ const ProgressBar = ({
           onChange(parseInt(event?.target.value));
         }}
       />
-      <div>
+      <LabelWrapper>
         <span className="text-xs">{leftLabel}</span>
         <span className="text-xs">{rightLabel}</span>
-      </div>
-    </div>
+      </LabelWrapper>
+    </ProgressWrapper>
   );
 };
 

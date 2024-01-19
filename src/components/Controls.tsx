@@ -6,7 +6,8 @@ import shuffleButtonIcon from "../assets/icons/shuffle.svg";
 import shuffleButtonDisabledIcon from "../assets/icons/shuffle_disabled.svg";
 import repeatButtonIcon from "../assets/icons/repeat.svg";
 import repeatButtonDisabledIcon from "../assets/icons/repeat_disabled.svg";
-import ImageButton from "./ImageButton";
+import Button from "./Button";
+import styled from "styled-components";
 
 type ControlsProps = {
   onPlayClick: () => void;
@@ -29,23 +30,27 @@ const Controls = ({
   shuffle,
   onShuffleClick,
 }: ControlsProps) => {
+  const BtnWrapper = styled.div`
+    display: flex;
+    margin-top: 20px;
+  `;
   return (
-    <div>
-      <ImageButton
+    <BtnWrapper>
+      <Button
         src={shuffle ? shuffleButtonIcon : shuffleButtonDisabledIcon}
         onClick={onShuffleClick}
       />
-      <ImageButton src={prevButtonIcon} onClick={onPrevClick} />
-      <ImageButton
+      <Button src={prevButtonIcon} onClick={onPrevClick} />
+      <Button
         src={isPlaying ? pauseButtonIcon : playButtonIcon}
         onClick={onPlayClick}
       />
-      <ImageButton src={nextButtonIcon} onClick={onNextClick} />
-      <ImageButton
+      <Button src={nextButtonIcon} onClick={onNextClick} />
+      <Button
         src={repeat ? repeatButtonIcon : repeatButtonDisabledIcon}
         onClick={onRepeatClick}
       />
-    </div>
+    </BtnWrapper>
   );
 };
 

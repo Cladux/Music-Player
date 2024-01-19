@@ -4,7 +4,7 @@ type ImageButtonsProps = {
   className?: string;
 };
 
-const ImageButton = ({ src, onClick, className }: ImageButtonsProps) => {
+const Button = ({ src, onClick, className }: ImageButtonsProps) => {
   const buttonSize = 65;
   return (
     <>
@@ -20,4 +20,4 @@ const ImageButton = ({ src, onClick, className }: ImageButtonsProps) => {
   );
 };
 
-export default ImageButton;
+export default Button;

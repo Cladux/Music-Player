@@ -12,32 +12,32 @@ const playlist: Playlist = [
   {
     audioSrc: trackOne,
     metadata: {
-      title: "Guitar I",
-      artist: "John Doe",
+      title: "aaa",
+      artist: "aaa",
       coverSrc: coverOne,
     },
   },
   {
     audioSrc: trackTwo,
     metadata: {
-      title: "Guitar II",
-      artist: "John Doe",
+      title: "",
+      artist: "",
       coverSrc: coverTwo,
     },
   },
   {
     audioSrc: trackThree,
     metadata: {
-      title: "Sunflower",
-      artist: "Jane Doe",
+      title: "",
+      artist: "",
       coverSrc: coverThree,
     },
   },
   {
     audioSrc: trackFour,
     metadata: {
-      title: "Flowers",
-      artist: "Jane Doe",
+      title: "",
+      artist: "",
       coverSrc: coverFour,
     },
   },

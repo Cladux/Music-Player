@@ -3,6 +3,7 @@ import Controls from "./Controls";
 import ProgressBar from "./ProgressBar";
 import SongInfo from "./SongInfo";
 import useAudioPlayer from "../audioPlayer/hooks";
+import styled from "styled-components";
 
 const AudioPlayer = () => {
   const {
@@ -41,9 +42,13 @@ const AudioPlayer = () => {
       return (currentTrackPlaybackPosition / currentTrackDuration) * 100;
     }
   }
-
+  const Player = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `;
   return (
-    <div className="flex flex-col items-center">
+    <Player>
       <SongInfo
         title={currentTrackMetadata?.title}
         artist={currentTrackMetadata?.artist}
@@ -65,7 +70,7 @@ const AudioPlayer = () => {
         onPlayClick={togglePlayPause}
         isPlaying={playbackState === "PLAYING"}
       />
-    </div>
+    </Player>
   );
 };
 

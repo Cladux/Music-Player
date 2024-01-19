@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Music Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple music player built with React, Vite, and TypeScript.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Play/pause music
+- Skip to next/previous track
+- Shuffle tracks
+- Repeat tracks
+- Volume control
+- Progress bar
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository.
+2. Install dependencies with `npm install`.
+3. Run the app with `npm run dev`.
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Add your music files to the `public/music` directory.
+2. Start the app with `npm run dev`.
+3. Open `http://localhost:3000` in your browser.
+4. Click on a track to start playing.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contributing
+
+Contributions are welcome! Please open an issue or pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

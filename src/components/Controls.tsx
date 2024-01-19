@@ -33,6 +33,7 @@ const Controls = ({
   const BtnWrapper = styled.div`
     display: flex;
     margin-top: 20px;
+    gap: 5px;
   `;
   return (
     <BtnWrapper>

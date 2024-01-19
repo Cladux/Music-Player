@@ -19,10 +19,8 @@ This is a simple music player built with React, Vite, and TypeScript.
 
 ## Usage
 
-1. Add your music files to the `public/music` directory.
-2. Start the app with `npm run dev`.
-3. Open `http://localhost:3000` in your browser.
-4. Click on a track to start playing.
+1. Open `http://localhost:3000` in your browser.
+2. Click on a track to start playing.
 
 ## Contributing
 

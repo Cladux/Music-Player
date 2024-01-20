@@ -17,6 +17,32 @@ const ProgressBar = ({
     display: flex;
     flex-direction: column;
   `;
+  const ProgressInput = styled.input`
+    appearance: none;
+    width: 400px;
+    height: 7px;
+    background-color: #505050;
+    border-radius: 7px;
+    outline: none;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #ff4500;
+      cursor: ew-resize;
+      box-shadow: 0 0 2px 0 #555;
+      transition: all 0.3s ease-in-out;
+    }
+    &::-moz-range-thumb {
+      height: 19px;
+      width: 19px;
+      background-color: white;
+      border-radius: 100%;
+      border: #505050 1px solid;
+      cursor: pointer;
+    }
+  `;
   const LabelWrapper = styled.div`
     display: flex;
     justify-content: space-between;
@@ -25,7 +51,7 @@ const ProgressBar = ({
   `;
   return (
     <ProgressWrapper>
-      <input
+      <ProgressInput
         type="range"
         min="1"
         max="100"

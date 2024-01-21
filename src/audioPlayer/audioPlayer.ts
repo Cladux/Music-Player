@@ -18,7 +18,6 @@ export function createAudioPlayer(
   const audioElement: HTMLAudioElement = new Audio();
 
   /* === PlayerState === */
-  //#region
   function emitCurrentPlayerState() {
     const state = computeCurrentPlayerState();
     onStateChange(state);
@@ -54,10 +53,8 @@ export function createAudioPlayer(
   function getPlaybackState(): PlaybackState {
     return audioElement.paused ? "PAUSED" : "PLAYING";
   }
-  //#endRegion
 
   /* === Event Listener === */
-  //#region
   function setupAudioElementListeners() {
     audioElement.addEventListener("playing", emitCurrentPlayerState);
     audioElement.addEventListener("pause", emitCurrentPlayerState);
@@ -82,10 +79,7 @@ export function createAudioPlayer(
     }
   }
 
-  //#endRegion
-
   /* === Track handling === */
-  //#region
   function replayCurrentTrack() {
     audioElement.currentTime = 0;
     audioElement.play();
@@ -110,10 +104,8 @@ export function createAudioPlayer(
     const index = Math.floor(Math.random() * (playlist.length - 1));
     return index < currentTrackIndex ? index : index + 1;
   }
-  //#endRegion
 
   /* === Init & Cleanup === */
-  //#region
   function init() {
     setupAudioElementListeners();
     loadTrack(0);
@@ -123,10 +115,8 @@ export function createAudioPlayer(
     removeAudioElementListeners();
     audioElement.pause();
   }
-  //#endRegion
 
   /* === Controls === */
-  //#region
   function setPlaybackPosition(position: number) {
     if (isNaN(position)) return;
     audioElement.currentTime = position;
@@ -166,7 +156,6 @@ export function createAudioPlayer(
       audioElement.pause();
     }
   }
-  //#endRegion
 
   init();
   return {
